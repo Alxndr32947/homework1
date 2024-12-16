@@ -9,8 +9,8 @@ def get_multiplied_digits(number):
     if len(str_number) > 1:
         return first * get_multiplied_digits(int(str_number[1:]))
     else:
-        # Если осталась одна цифра, возвращаем её, что предотвращает бесконечную рекурсию.
-        return first
+        # Если осталась одна цифра, возвращаем её, но заменяем 0 на 1.
+        return first if first != 0 else 1
 
 
 # Примеры использования функции
